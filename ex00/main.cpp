@@ -27,4 +27,7 @@ int main() {
 	std::cout << w_j->getType() << " " << std::endl;
 	w_j->makeSound(); //will output the w_meta sound!
 	w_meta->makeSound();
+
+	delete w_meta;
+	delete w_j;
 }

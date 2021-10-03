@@ -12,7 +12,20 @@ int main() {
 	num = 10;
 	Animal *animals[num];
 	for(int i = 0; i < num/2; i++)
-		animals[num] = new Dog;
+	{
+		std::cout << i << " ";
+		animals[i] = new Dog;
+	}
 	for(int i = num/2; i < num; i++)
-		animals[num] = new Cat;
+	{
+		std::cout << i << " ";
+		animals[i] = new Cat;
+	}
+	printMsg("\n-----AND DELETING NOW-----\n");
+
+	while (--num >= 0)
+	{
+		std::cout << num << " ";
+		delete animals[num];
+	}
 }

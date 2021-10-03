@@ -23,6 +23,8 @@ Cat::~Cat(){
 }
 
 Cat &Cat::operator=(const Cat &orig) {
+	if (this == &orig)
+		return *this;
 	this->_type = orig.getType();
 	return *this;
 }

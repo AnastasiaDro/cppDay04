@@ -23,6 +23,8 @@ Dog::~Dog(){
 }
 
 Dog &Dog::operator=(const Dog &orig) {
+	if (this == &orig)
+		return *this;
 	this->_type = orig.getType();
 	return *this;
 }

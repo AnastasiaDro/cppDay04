@@ -2,8 +2,8 @@
 // Created by Cesar Erebus on 10/3/21.
 //
 
-#ifndef DAY04_CAT_HPP
-#define DAY04_CAT_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
 
 #include <string>
@@ -23,4 +23,4 @@ public:
 };
 
 
-#endif //DAY04_CAT_HPP
+#endif //CAT_HPP

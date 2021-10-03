@@ -36,6 +36,8 @@ void Animal::makeSound() const{
 }
 
 Animal &Animal::operator=(const Animal &orig) {
+	if (this == &orig)
+		return *this;
 	this->_type = orig.getType();
 	return *this;
 }

@@ -8,7 +8,7 @@ Dog::Dog()
 {
 	_type = "Dog";
 	brain = new Brain;
-	printMsg("DOG Default Constructor here");
+	printMsg("--DOG Default Constructor here");
 }
 
 //Copy constructor
@@ -20,10 +20,13 @@ Dog::Dog(const Dog &orig)
 
 //Desrtructor
 Dog::~Dog(){
-	printMsg("DOG Destructor here");
+	delete brain;
+	printMsg("--DOG Destructor here");
 }
 
 Dog &Dog::operator=(const Dog &orig) {
+	if (this == &orig)
+		return *this;
 	this->_type = orig.getType();
 	return *this;
 }

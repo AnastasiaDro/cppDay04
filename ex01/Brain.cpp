@@ -3,3 +3,7 @@
 //
 
 #include "Brain.hpp"
+
+Brain::Brain(const Brain &orig) {
+	*this = orig;
+}

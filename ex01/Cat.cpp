@@ -14,7 +14,9 @@ Cat::Cat()
 //Copy constructor
 Cat::Cat(const Cat &orig)
 {
-	*this = orig;
+	this->_type = orig.getType();
+	this->brain = Brain(orig.brain);
+
 	printMsg("CAT Copy Constructor here");
 }
 

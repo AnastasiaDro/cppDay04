@@ -1,8 +1,8 @@
 NAME = ex00
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
-HEAD = Animal.hpp Dog.hpp Cat.hpp
+HEAD = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 
 OBJS = $(SRC:.cpp=.o)
 

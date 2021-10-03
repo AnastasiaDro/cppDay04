@@ -3,6 +3,8 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 
 int main() {
@@ -18,4 +20,11 @@ int main() {
 	delete meta;
 	delete j;
 	delete i;
+
+	printMsg("\n-----VERY-VERY WrongAnimal and WrongCat now-----");
+	const WrongAnimal *w_meta = new WrongAnimal();
+	const WrongAnimal *w_j = new WrongCat();
+	std::cout << w_j->getType() << " " << std::endl;
+	w_j->makeSound(); //will output the w_meta sound!
+	w_meta->makeSound();
 }

@@ -7,9 +7,6 @@
 
 
 int main() {
-
-
-
 	int num;
 
 	num = 10;
@@ -59,5 +56,4 @@ int main() {
 	printMsg("\n-But ideas #0 of the origin cat and dog is still:");
 	printMsg("\nThe dog's idea #0 is... " + dog.getBrain()->getIdea(0) );
 	printMsg("The cat's idea #0 is... " + cat.getBrain()->getIdea(0) + "\n");
-
 }

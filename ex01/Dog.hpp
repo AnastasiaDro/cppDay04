@@ -14,6 +14,8 @@ class Dog: public virtual Animal
 private:
 	Brain *brain;
 public:
+	Brain *getBrain() const;
+
 	Dog();
 	Dog(Dog const &orig); //copy constructor
 	//destructor

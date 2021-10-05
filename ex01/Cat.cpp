@@ -14,10 +14,9 @@ Cat::Cat()
 //Copy constructor
 Cat::Cat(const Cat &orig)
 {
-	this->_type = orig.getType();
-	this->brain = Brain(orig.brain);
-
-	printMsg("CAT Copy Constructor here");
+	brain = new Brain;
+	*this = orig;
+	printMsg("--CAT Copy Constructor here");
 }
 
 //Desrtructor
@@ -30,9 +29,14 @@ Cat &Cat::operator=(const Cat &orig) {
 	if (this == &orig)
 		return *this;
 	this->_type = orig.getType();
+	*(this->brain) = *(orig.brain);
 	return *this;
 }
 
 void Cat::makeSound() const{
 	printMsg(this->_type +  " says: \"Meow-meow!\"");
+}
+
+Brain *Cat::getBrain() const {
+	return brain;
 }

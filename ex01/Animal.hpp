@@ -5,8 +5,10 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
+
 #include <iostream>
 #include <string>
+#include "utils.hpp"
 
 class Animal {
 protected:
@@ -28,6 +30,5 @@ public:
 	virtual void makeSound() const;
 };
 
-void	printMsg(std::string const &msg);
 
 #endif //ANIMAL_HPP

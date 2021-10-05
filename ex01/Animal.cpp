@@ -42,8 +42,3 @@ Animal &Animal::operator=(const Animal &orig) {
 	return *this;
 }
 
-void	printMsg(std::string const &msg)
-{
-	std::cout << msg << std::endl;
-}
-

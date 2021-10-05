@@ -11,11 +11,16 @@
 class Brain {
 
 private:
-	std::string ideas[100];
+	static const int _num = 100;
+	std::string _ideas[_num];
 public:
 	Brain();
 	Brain(const Brain &orig); // copy constructor
 
+	Brain &operator=(const Brain &orig);
+
+	std::string getIdea(int number) const;
+	void setIdea(int number, std::string idea);
 };
 
 

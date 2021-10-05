@@ -14,8 +14,9 @@ Dog::Dog()
 //Copy constructor
 Dog::Dog(const Dog &orig)
 {
+	brain = new Brain;
 	*this = orig;
-	printMsg("DOG Copy Constructor here");
+	printMsg("--DOG Copy Constructor here");
 }
 
 //Desrtructor
@@ -28,10 +29,15 @@ Dog &Dog::operator=(const Dog &orig) {
 	if (this == &orig)
 		return *this;
 	this->_type = orig.getType();
+	*(this->brain) = *(orig.brain);
 	return *this;
 }
 
 void  Dog::makeSound() const{
 	printMsg(this->_type + " says: \"Woof-woof!\"");
+}
+
+Brain *Dog::getBrain() const {
+	return brain;
 }
 

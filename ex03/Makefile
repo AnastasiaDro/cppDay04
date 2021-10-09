@@ -1,8 +1,8 @@
-NAME = ex01
+NAME = ex03
 
-SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp ICharacter.cpp Character.cpp utils.cpp
+SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp ICharacter.cpp Character.cpp utils.cpp MateriaSource.cpp IMateriaSource.cpp
 
-HEAD = AMateria.hpp Ice.hpp Cure.hpp ICharacter.hpp Character.hpp utils.hpp
+HEAD = AMateria.hpp Ice.hpp Cure.hpp ICharacter.hpp Character.hpp utils.hpp IMateriaSource.hpp MateriaSource.hpp
 
 OBJS = $(SRC:.cpp=.o)
 

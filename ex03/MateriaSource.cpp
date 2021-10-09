@@ -17,7 +17,7 @@ MateriaSource::MateriaSource(const MateriaSource &orig) {
 MateriaSource &MateriaSource::operator=(const MateriaSource &orig) {
 	if (this == &orig)
 		return *this;
-//	freeMatArray(_materNum, this->_materias);
+	freeMatArray(_materNum, this->_materias);
 	for (int i = 0; i < _materNum; i++)
 		this->_materias[i] = orig._materias[i];
 	return *this;
@@ -28,24 +28,16 @@ MateriaSource::~MateriaSource() {
 }
 
 void MateriaSource::learnMateria(AMateria *m) {
-
-//	learnMateria must copy the Materia passed as a parameter, and store it in memory
-//	to be cloned later. Much in the same way as for Character , the Source can know at
-//	most 4 Materia, which are not necessarily unique.
 	for (int i = 0; i < _materNum; i++)
 	{
 		if (!this->_materias[i])
 		{
-			this->_materias[i] = m->clone();
+			this->_materias[i] = m;
 			break;
 		}
 	}
 }
 
-
-//createMateria(std::string const &) will return a new Materia, which will be a
-//copy of the Materia (previously learned by the Source) which type equals the parameter.
-//Returns 0 if the type is unknow
 AMateria *MateriaSource::createMateria(const std::string &type) {
 	for (int i = 0; i < _materNum; i++) {
 		if (this->_materias[i]->getType() == type)

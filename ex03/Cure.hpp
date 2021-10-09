@@ -10,6 +10,16 @@
 
 class Cure : public virtual AMateria {
 
+public:
+	Cure();
+	virtual Cure* clone() const;
+	virtual void use(ICharacter& target);
+
+	Cure(Cure const &orig); //copy constructor
+	virtual ~Cure();
+
+	//operators' overloading
+	Cure &operator=(const Cure &orig);
 };
 
 

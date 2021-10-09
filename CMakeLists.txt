@@ -12,4 +12,4 @@ set(CMAKE_CXX_STANDARD 98)
 #        ex02/utils.cpp ex02/utils.hpp)
 
 add_executable(Day04 ex03/AMateria.cpp ex03/AMateria.hpp ex03/Ice.cpp ex03/Ice.hpp
-                ex03/Cure.cpp ex03/Cure.hpp ex03/utils.cpp ex03/utils.hpp)
+                ex03/Cure.cpp ex03/Cure.hpp ex03/utils.cpp ex03/utils.hpp ex03/main.cpp)

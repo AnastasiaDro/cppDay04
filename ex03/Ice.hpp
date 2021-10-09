@@ -9,7 +9,17 @@
 #include "AMateria.hpp"
 
 class Ice : public virtual AMateria {
+public:
+	Ice();
+	virtual Ice* clone() const;
+	virtual void use(ICharacter& target);
 
+
+	Ice(Ice const &orig); //copy constructor
+	virtual ~Ice();
+
+	//operators' overloading
+	Ice &operator=(const Ice &orig);
 };
 
 

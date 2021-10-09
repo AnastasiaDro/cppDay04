@@ -15,13 +15,6 @@ protected:
 public:
 	AMateria(std::string const & type);
 
-//	Animal(Animal const &orig);	//copy constructor
-//	//destructor
-//	virtual ~Animal();
-//
-//	//operators' overloading
-//	Animal &operator=(const Animal &orig);
-
 	AMateria(AMateria const &orig); //copy constructor
 	virtual ~AMateria();
 

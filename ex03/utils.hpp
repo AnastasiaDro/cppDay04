@@ -7,7 +7,12 @@
 
 # include <string>
 # include <iostream>
+# include "AMateria.hpp"
 
 void	printMsg(std::string const &msg);
+
+void	initMatArray(int size, AMateria **ptr);
+
+void 	freeMatArray(int size, AMateria **ptr);
 
 #endif //DAY04_UTILS_HPP

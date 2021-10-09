@@ -14,7 +14,7 @@ Cure::Cure() : AMateria("cure") {
 Cure::Cure(const Cure &orig)
 {
 	*this = orig;
-	printMsg("--CURE Copy Constructor here");)
+	printMsg("--CURE Copy Constructor here");
 }
 
 Cure::~Cure() {

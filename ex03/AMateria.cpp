@@ -29,3 +29,11 @@ AMateria &AMateria::operator=(const AMateria &orig) {
 	return *this;
 }
 
+std::string const &AMateria::getType() const {
+	return this->_type;
+}
+
+void AMateria::use(ICharacter &target) {
+	printMsg("* AMateria doing something  at " + target.getName() + "*");
+}
+

@@ -3,21 +3,37 @@
 //
 
 #include "Character.hpp"
+#include "utils.hpp"
 
 Character::Character() {
     this->_name = "NoName";
-    capacity = materNum;
     materias = new AMateria *[materNum];
+	initMatArray(materNum, materias);
 }
 
-Character::Character(std::string name) {
+Character::Character(std::string const &name) {
     this->_name = name;
-    capacity = materNum;
     materias = new AMateria *[materNum];
+	initMatArray(materNum, materias);
+}
+
+Character::Character(const Character &orig) {
+	*this = orig;
+	printMsg("--CHARACTER copy constructor here");
 }
 
 Character::~Character() {
-    delete materias;
+	freeMatArray(materNum, this->materias);
+}
+
+Character &Character::operator=(const Character &orig)
+{
+	if(this == &orig)
+		return *this;
+	freeMatArray(materNum, this->materias);
+	for(int i = 0; i < materNum; i++)
+		this->materias[i] = orig.materias[i];
+	return *this;
 }
 
 std::string const &Character::getName() const {
@@ -25,16 +41,29 @@ std::string const &Character::getName() const {
 }
 
 void Character::equip(AMateria *m) {
-    if (this->capacity == 0 || !m)
-        return ;
-    this->materias[materNum - this->capacity] = m; 
+	for (int i = 0; i < materNum; i++)
+	{
+		if (!this->materias[i])
+		{
+			this->materias[i] = m;
+			break;
+		}
+	}
 }
 
 void Character::unequip(int idx)
 {
-    if (idx < 0 || idx >= this->materNum)
+    if (idx < 0 || idx >= materNum)
         return;
     this->materias[idx] = nullptr;
 }
+
+void Character::use(int idx, ICharacter &target) {
+	this->materias[idx]->use(target);
+}
+
+
+
+
 
 

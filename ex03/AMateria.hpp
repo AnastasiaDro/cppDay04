@@ -2,11 +2,12 @@
 // Created by  Anastasia on 09.10.2021.
 //
 
-#ifndef DAY04_AMATERIA_HPP
-#define DAY04_AMATERIA_HPP
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 
-
+//#include "ICharacter.hpp"
 #include <string>
+#include "ICharacter.hpp"
 
 class AMateria {
 protected:

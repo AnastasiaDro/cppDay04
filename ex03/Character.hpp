@@ -14,15 +14,19 @@ private:
 	std::string _name;
 	AMateria **materias;
 	static const int materNum = 4;
-    int capacity;
     Character();
 public:
-    Character(std::string name);
+    Character(std::string const &name);
+	Character(Character const &orig); //copy constructor
 	virtual ~Character();
+
+	Character &operator=(const Character &orig);
+
     virtual std::string const & getName() const;
     virtual void equip(AMateria* m);
     virtual void unequip(int idx);
     virtual void use(int idx, ICharacter& target);
+
 };
 
 

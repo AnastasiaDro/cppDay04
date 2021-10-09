@@ -7,6 +7,7 @@
 
 
 #include "AMateria.hpp"
+#include "ICharacter.cpp"
 
 class Cure : public virtual AMateria {
 

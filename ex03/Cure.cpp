@@ -4,6 +4,8 @@
 
 #include "Cure.hpp"
 #include "utils.hpp"
+#include "ICharacter.hpp"
+
 
 Cure::Cure() : AMateria("cure") {
 	printMsg("--CURE Default Constructor here");
@@ -33,4 +35,6 @@ Cure *Cure::clone() const {
 	return newCure;
 }
 
-void Cure::use(ICharacter &target) {}
+void Cure::use(ICharacter &target) {
+	printMsg("Cure " + this->_type +  "heals " + target.getName() +  "’s wounds * ");
+}

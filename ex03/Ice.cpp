@@ -4,6 +4,7 @@
 
 #include "Ice.hpp"
 #include "utils.hpp"
+#include "ICharacter.hpp"
 
 Ice::Ice() : AMateria("ice")  {
 	printMsg("--ICE Default Constructor here");
@@ -31,4 +32,6 @@ Ice *Ice::clone() const {
 	return newIce;
 }
 
-void Ice::use(ICharacter &target) {}
+void Ice::use(ICharacter &target) {
+	printMsg("Ice " + this->_type + " shoots an ice bolt at " + target.getName() + "*");
+}

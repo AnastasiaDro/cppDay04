@@ -7,19 +7,14 @@
 #include "ICharacter.hpp"
 
 
-Cure::Cure() : AMateria("cure") {
-	printMsg("--CURE Default Constructor here");
-}
+Cure::Cure() : AMateria("cure") {}
 
 Cure::Cure(const Cure &orig)
 {
 	*this = orig;
-	printMsg("--CURE Copy Constructor here");
 }
 
-Cure::~Cure() {
-	printMsg("--CURE Destructor here");
-}
+Cure::~Cure() {}
 
 Cure &Cure::operator=(const Cure &orig)
 {
@@ -36,5 +31,5 @@ Cure *Cure::clone() const {
 }
 
 void Cure::use(ICharacter &target) {
-	printMsg("Cure " + this->_type +  "heals " + target.getName() +  "’s wounds * ");
+	printMsg("* heals " + target.getName() +  "’s wounds * ");
 }

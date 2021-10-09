@@ -4,7 +4,12 @@
 
 #ifndef IMATERIASOURCE_HPP
 #define IMATERIASOURCE_HPP
-#include "AMateria.hpp"
+
+#include <iostream>
+
+class IMateriaSource;
+class AMateria;
+
 
 class IMateriaSource {
 public:

@@ -5,22 +5,15 @@
 #include "AMateria.hpp"
 #include "utils.hpp"
 
-AMateria::AMateria() : _type("AMateria") {
-	printMsg("-AMATERIA Default Constructor here");
-}
+AMateria::AMateria() : _type("AMateria") {}
 
-AMateria::AMateria(const std::string &type) : _type(type) {
-	printMsg("-AMATERIA Type Constructor here");
-}
+AMateria::AMateria(const std::string &type) : _type(type) {}
 
 AMateria::AMateria(const AMateria &orig) {
 	*this = orig;
-	printMsg("-AMATERIA Copy Constructor here");
 }
 
-AMateria::~AMateria() {
-	printMsg("-AMATERIA Destructor here");
-}
+AMateria::~AMateria() {}
 
 AMateria &AMateria::operator=(const AMateria &orig) {
 	if (this == &orig)

@@ -17,7 +17,7 @@ MateriaSource::MateriaSource(const MateriaSource &orig) {
 MateriaSource &MateriaSource::operator=(const MateriaSource &orig) {
 	if (this == &orig)
 		return *this;
-	freeMatArray(_materNum, this->_materias);
+//	freeMatArray(_materNum, this->_materias);
 	for (int i = 0; i < _materNum; i++)
 		this->_materias[i] = orig._materias[i];
 	return *this;
@@ -36,7 +36,7 @@ void MateriaSource::learnMateria(AMateria *m) {
 	{
 		if (!this->_materias[i])
 		{
-			*(this->_materias[i]) = *m;
+			this->_materias[i] = m->clone();
 			break;
 		}
 	}

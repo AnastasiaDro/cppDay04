@@ -6,18 +6,13 @@
 #include "utils.hpp"
 #include "ICharacter.hpp"
 
-Ice::Ice() : AMateria("ice")  {
-	printMsg("--ICE Default Constructor here");
-}
+Ice::Ice() : AMateria("ice")  {}
 
 Ice::Ice(const Ice &orig) {
 	*this = orig;
-	printMsg("--ICE Copy Constructor here");
 }
 
-Ice::~Ice() {
-	printMsg("--ICE Destructor here");
-}
+Ice::~Ice() {}
 
 Ice &Ice::operator=(const Ice &orig) {
 	if (this == &orig)
@@ -33,5 +28,5 @@ Ice *Ice::clone() const {
 }
 
 void Ice::use(ICharacter &target) {
-	printMsg("Ice " + this->_type + " shoots an ice bolt at " + target.getName() + "*");
+	printMsg( "* shoots an ice bolt at " + target.getName() + " *");
 }

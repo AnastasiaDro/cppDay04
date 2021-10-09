@@ -31,4 +31,4 @@ Ice *Ice::clone() const {
 	return newIce;
 }
 
-void Ice::use(ICharacter& &target) {}
+void Ice::use(ICharacter &target) {}

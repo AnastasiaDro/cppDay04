@@ -31,7 +31,7 @@ const std::string &Animal::getType() const {
 	return _type;
 }
 
-//void Animal::makeSound() const;
+void Animal::makeSound() const {}  //pure virtual
 //{
 //	printMsg(this->_type + " says: *unintelligible roar*");
 //}

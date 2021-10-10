@@ -35,4 +35,7 @@ void Brain::setIdea(int number, const std::string& idea)
 	this->_ideas[number] = idea;
 }
 
+Brain::~Brain() {
+	printMsg("--BRAIN Destructor here");
+}
 

@@ -16,7 +16,7 @@ private:
 public:
 	Brain();
 	Brain(const Brain &orig); // copy constructor
-
+	~Brain();
 	Brain &operator=(const Brain &orig);
 
 	std::string getIdea(int number) const;

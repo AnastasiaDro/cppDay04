@@ -22,9 +22,7 @@ Ice &Ice::operator=(const Ice &orig) {
 }
 
 Ice *Ice::clone() const {
-	Ice *newIce = new Ice;
-	newIce->_type = this->getType();
-	return newIce;
+	return new Ice(*this);
 }
 
 void Ice::use(ICharacter &target) {

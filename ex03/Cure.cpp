@@ -25,9 +25,7 @@ Cure &Cure::operator=(const Cure &orig)
 }
 
 Cure *Cure::clone() const {
-	Cure *newCure = new Cure;
-	newCure->_type = this->getType();
-	return newCure;
+	return new Cure(*this);
 }
 
 void Cure::use(ICharacter &target) {

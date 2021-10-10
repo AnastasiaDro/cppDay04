@@ -59,6 +59,8 @@ void Character::unequip(int idx)
 }
 
 void Character::use(int idx, ICharacter &target) {
+	if (idx < 0 || idx >= materNum || !materias[idx])
+		return;
 	this->materias[idx]->use(target);
 }
 

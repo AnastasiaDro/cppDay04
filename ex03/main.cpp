@@ -18,6 +18,8 @@ int main()
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
+
+
 	me->equip(tmp);
 	me->unequip(5);
 	ICharacter* bob = new Character("bob");
@@ -41,6 +43,11 @@ int main()
 	printMsg("         me->unequip(2)");
 	me->use(2, *bob);
 	printMsg("         me->use(2, *bob)");
+	printMsg("------PASSED!");
+
+	printMsg("------TEST #4: try to create nonexistent type of materia...");
+	//попытка создать несуществующую материю
+	tmp = src->createMateria("nu");
 	printMsg("------PASSED!");
 
 	delete bob;

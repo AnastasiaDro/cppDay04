@@ -14,7 +14,7 @@ public:
 	Cat();
 	Cat(const Cat &orig); //copy constructor
 	//destructor
-	~Cat();
+	virtual ~Cat();
 
 	//operators overloading
 	Cat &operator=(const Cat &orig);

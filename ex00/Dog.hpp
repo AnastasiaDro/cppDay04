@@ -14,7 +14,7 @@ public:
 	Dog();
 	Dog(Dog const &orig); //copy constructor
 	//destructor
-	~Dog();
+	virtual ~Dog();
 
 	//operators overloading
 	Dog &operator=(const Dog &orig);

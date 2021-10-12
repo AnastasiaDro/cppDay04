@@ -24,10 +24,13 @@ int main() {
 	printMsg("\n-----VERY-VERY WrongAnimal and WrongCat now-----");
 	const WrongAnimal *w_meta = new WrongAnimal();
 	const WrongAnimal *w_j = new WrongCat();
+	const WrongCat *w_c = new WrongCat();
 	std::cout << w_j->getType() << " " << std::endl;
 	w_j->makeSound(); //will output the w_meta sound!
 	w_meta->makeSound();
+	w_c->makeSound();
 
 	delete w_meta;
 	delete w_j;
+	delete w_c;
 }

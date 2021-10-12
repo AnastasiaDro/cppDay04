@@ -58,8 +58,8 @@ int main(){
 	printMsg("---test2 is a copy of cat, test2 idea #0 is ... " + test2.getBrain()->getIdea(0));
 
 	printMsg("\n-Let's change test1's and test2's ideas #0");
-	test1.getBrain()->setIdea(0, "to eat Prada shoes");
-	test2.getBrain()->setIdea(0, "to piss into slippers");
+	test1.getBrain()->setIdea(0, "to eat the Prada shoes");
+	test2.getBrain()->setIdea(0, "to piss into the slippers");
 	printMsg("\n---test1 is a copy of dog, test1 idea #0 is ... " + test1.getBrain()->getIdea(0));
 	printMsg("---test2 is a copy of cat, test2 idea #0 is ... " + test2.getBrain()->getIdea(0));
 
